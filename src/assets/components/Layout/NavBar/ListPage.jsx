@@ -1,4 +1,5 @@
 import { NavLink } from "react-router";
+import { useState } from "react";
 
 const navLink = [
     {
@@ -42,6 +43,12 @@ const navLink = [
 ];
 
 const ListPage = () => {
+    const [openCategory, setOpenCategory] = useState(null);
+
+    const toggleCategory = (title) => {
+        setOpenCategory(openCategory === title ? null : title);
+    };
+
     return (
         <>
             {navLink.map((item) => (
@@ -52,11 +59,14 @@ const ListPage = () => {
                             to={item.path}>{item.title}</NavLink>
                     ) : item.category ? (
                         <div className="relative group z-30">
-                            <button className='cursor-pointer flex gap-[10px] items-center justify-center text-[18px] text-slate-900 font-bold transition duration-300 hover:text-[var(--color-primary-900)] hover:underline'>
+                            <button
+                                onClick={() => toggleCategory(item.title)}
+                                className='cursor-pointer flex gap-[10px] items-center justify-center text-[18px] text-slate-900 font-bold transition duration-300 hover:text-[var(--color-primary-900)] hover:underline'
+                            >
                                 {item.title}
                                 {item.icon}
                             </button>
-                            <ul className="absolute left-0 mt-2 w-40 bg-white shadow-md hidden group-hover:block top-4">
+                            <ul className={`absolute left-0 mt-2 w-40 bg-white shadow-md ${openCategory === item.title ? 'block' : 'hidden'}`}>
                                 {item.category.map((subItem) => (
                                     <li key={subItem.title} className="px-4 py-2 hover:bg-gray-100 text-[18px] text-slate-900 font-bold transition duration-300 hover:text-[var(--color-primary-900)] hover:underline">
                                         <NavLink to={subItem.path}>{subItem.title}</NavLink>
