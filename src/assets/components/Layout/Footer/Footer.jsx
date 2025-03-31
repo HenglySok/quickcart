@@ -12,7 +12,7 @@ function Footer() {
 
             <h3 className='text-xl font-bold'>
                 <span className='text-[var(--color-primary-900)]'>Quick</span>
-                <span className='text-[var(--color-secondary-900)]'>Cart </span>
+                <span className='text-[var(--color-secondary-900)] text-center'>Cart </span>
                 Your Best Choice for Online Shopping
             </h3>
 
