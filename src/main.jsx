@@ -1,6 +1,6 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from 'react-router'; // ✅ Import Routes and Route
+import { BrowserRouter, Routes, Route } from 'react-router-dom'; // ✅ Import Routes and Route
 import { HashRouter as Router } from "react-router-dom";
 import './index.css';
 import App from './App.jsx';
@@ -15,7 +15,7 @@ import Groceries from './assets/pages/CategoryPage/Groceries.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter> {/* ✅ Wrap Routes inside BrowserRouter */}
+    <HashRouter> {/* ✅ Wrap Routes inside HashRouter */}
       <Routes>
         <Route path='/' element={<RootLayout />}>
           <Route path='/' element={<App />} />
@@ -27,6 +27,6 @@ createRoot(document.getElementById('root')).render(
           <Route path='/groceries' element={<Groceries />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   </StrictMode>
 );
