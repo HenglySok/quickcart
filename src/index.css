@@ -1,0 +1,22 @@
+/* src/index.css */
+@import "tailwindcss";
+
+@theme {
+  --font-primary: 'MyCustomFont', sans-serif;
+
+  --text-text: 18px;
+  --text-regular: 16px;
+  --text-small: 14px;
+  --text-extra-small: 12px;
+
+  --color-primary-900: #FC502A;
+  --color-primary-800: rgba(252, 80, 42, 0.9);
+  --color-primary-700: rgba(252, 80, 42, 0.8);
+  --color-secondary-900: #005246;
+  --color-secondary-800: rgba(252, 80, 42, 0.9);
+  --color-secondary-700: rgba(252, 80, 42, 0.8);
+  --color-accent-red: #6C0000;
+  --color-accent-pink: #C4525A;
+  --color-accent-purple: #FF49F5;
+  --color-accent-green: #00B635;
+}
