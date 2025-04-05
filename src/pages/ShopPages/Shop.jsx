@@ -1,5 +1,5 @@
 import React from 'react'
-import ProductSection from '../../components/ProductSection'
+import getProduct from '../../assets/components/services/product'
 
 const Shop = () => {
     const categoryList = [

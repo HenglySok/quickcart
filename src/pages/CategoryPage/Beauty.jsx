@@ -1,8 +1,8 @@
-import useProduct from "../../../hooks/useProduct"
-import Cart from "../../components/Cart/Cart"
-function Furniture() {
+import useProduct from '../../hooks/useProduct'
+import Cart from '../../assets/components/Cart/Cart'
+function Beauty() {
     const dataProduct = useProduct()
-    const typeProduct = [...dataProduct].filter(item => item.category === "furniture")
+    const typeProduct = [...dataProduct].filter(item => item.category === "beauty")
     return (
         <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-screen-lg mx-auto'>
             {typeProduct.map(item => (
@@ -18,4 +18,4 @@ function Furniture() {
     )
 }
 
-export default Furniture
+export default Beauty

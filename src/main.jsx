@@ -4,12 +4,12 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'; // ✅ Import R
 import './index.css';
 import App from './App.jsx';
 import RootLayout from './assets/components/Layout/root-layout.jsx';
-import Shop from './assets/pages/ShopPages/Shop.jsx';
-import Contact from './assets/pages/Contact.jsx';
-import Beauty from './assets/pages/CategoryPage/Beauty.jsx';
-import Fragrances from './assets/pages/CategoryPage/Fragrances.jsx';
-import Furniture from './assets/pages/CategoryPage/Furniture.jsx';
-import Groceries from './assets/pages/CategoryPage/Groceries.jsx';
+import Shop from './pages/ShopPages/Shop.jsx'
+import Contact from './pages/Contact.jsx';
+import Beauty from './pages/CategoryPage/Beauty.jsx';
+import Fragrances from './pages/CategoryPage/Fragrances.jsx';
+import Furniture from './pages/CategoryPage/Furniture.jsx';
+import Groceries from './pages/CategoryPage/Groceries.jsx';
 
 
 createRoot(document.getElementById('root')).render(
