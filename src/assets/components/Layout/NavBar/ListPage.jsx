@@ -66,12 +66,11 @@ const ListPage = () => {
                                 {item.title}
                                 {item.icon}
                             </button>
-                            <ul className={`absolute left-0 mt-2 w-40 bg-white shadow-md ${openCategory === item.title ? 'block' : 'hidden'} md:group-hover:block`}>
+                            <ul className={`absolute left-0 w-40 bg-white shadow-md ${openCategory === item.title ? 'block' : 'hidden'} md:group-hover:block`}>
                                 {item.category.map((subItem) => (
                                     <li key={subItem.title} className="px-4 py-2 hover:bg-gray-100 text-[18px] text-slate-900 font-bold transition duration-300 hover:text-[var(--color-primary-900)] hover:underline">
                                         <NavLink to={subItem.path}>{subItem.title}</NavLink>
-                                    </li>
-                                ))}
+                                    </li>))}
                             </ul>
                         </div>
                     ) : null}
